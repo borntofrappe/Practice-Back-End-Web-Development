@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower|Open+Sans');
+
+:root {
+  --font-header: 'Gamja Flower', cursive;
+  --font-text: 'Open Sans', sans-serif;
+  --color-text: rgb(84, 93, 145);
+  --color-bg: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: var(--font-text);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+
+/* NAVIGATION */
+/* display the anchor link elements for the navigation bar side by side */
+nav {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* display the anchor links like text labels, changing in color as a pseudo element emulates a border starting from the left and encompassing the entire width of the element */
+nav a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  /* position relative for the pseudo element */
+  position: relative;
+  /* transition for the hover and focus states */
+  transition: all 0.25s ease-out;
+  transition-delay: 0.05s
+}
+
+nav a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background: var(--color-text);
+  transition: width 0.25s ease-out;
+  z-index: -100;
+}
+
+nav a:hover, nav a:focus {
+  color: var(--color-bg);
+}
+nav a:hover:before, nav a:focus:before {
+  width: 100%
+}
+
+
+/* HOMEPAGE , 404 PAGE */
+/* display the header, paragraphs and SVG icons centered on top of one another */
+main, section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+h1 {
+  text-transform: capitalize;
+  line-height: 1.5;
+  font-size: 2.75rem;
+}
+h2 {
+  font-size: 5rem;
+  margin-bottom: 0.75rem;
+}
+p {
+  line-height: 2;
+}
+/* resize the SVG to be reasonably large */
+svg {
+  margin: 1rem 0;
+  width: 150px;
+  fill: var(--color-text);
+}
+
+/* display the contact icons side by side */
+.contacts__icons {
+  display: flex;
+  max-width: 550px;
+  width: 80vw;
+  justify-content: space-around;
+}
+/* resize the svg icons */
+.contacts__icons svg {
+  width: 62px;
+  height: 62px;
+}
