@@ -90,21 +90,21 @@ main svg {
 }
 
 /* display the contact icons side by side */
-section.contacts__icons {
+.contacts__icons {
   display: flex;
   max-width: 550px;
   width: 80vw;
   justify-content: space-around;
 }
 /* resize the svg icons */
-section.contacts__icons a {
+.contacts__icons a {
   width: 62px;
   height: 62px;
   /* position relative to absolute position the pseudo element */
   position: relative;
 }
 /* include a silly transition on hover on the SVG icons */
-section.contacts__icons a:before {
+.contacts__icons a:before {
   content: '';
   position: absolute;
   top: 50%;
@@ -115,7 +115,7 @@ section.contacts__icons a:before {
   background: rgba(84, 93, 145, 1);
   border-radius: 50%;
 }
-section.contacts__icons a:hover:before {
+.contacts__icons a:hover:before {
   left: -50%;
   top: -25%;
   width: 200%;
@@ -127,4 +127,5 @@ section.contacts__icons a:hover:before {
 .contacts__icons a svg {
   width: 100%;
   height: 100%;
+  fill: rgb(84, 93, 145);
 }
