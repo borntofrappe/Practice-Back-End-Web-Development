@@ -16,3 +16,47 @@ Since the project is set up to handle basic routing, through express and ejs, a 
 
 - a four oh four page.
 
+## Glitch
+
+A small preface on [Glitch](https://glitch.com), the playground I will likely use for back end projects. Each node application is comes with a public, views folders for styles and HTML files.
+
+Here are just a couple of notes I jotted down while developing the application:
+
+- **server.js** file is the file responsible for the actual JavaScript code;
+
+- Glitch doesn't work with CSS custom properties, so be wary of that.
+
+## Node.js
+
+The project makes use of the express and ejs modules to render different pages in different routes.
+
+In `server.js`, a few simple lines handle routing:
+
+```JS
+// include the express module
+var express = require('express');
+// set up an express application
+var app = express();
+// set up ejs as a templating engine
+app.set("view engine", "ejs");
+
+// include the styles as defined in the public folder
+// ! remember ejs files still need to reference the stylesheet in the head of the document
+app.use(express.static('public'));
+
+// render the homepage in the root route
+// render() is a function which looks into the views folder to render ejs files
+app.get('/', function(request, response) {
+  response.render("homepage");
+});
+
+// render the contacts and random ejs files in their respective routes
+app.get('/contacts', function(request, response) {
+  response.render("contacts");
+});
+
+app.get('/random', function(request, response) {
+  response.render("random");
+});
+```
+
