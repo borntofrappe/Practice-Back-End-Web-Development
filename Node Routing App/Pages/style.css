@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower|Open+Sans');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(84, 93, 145);
+  background: #fff;
+}
+
+
+/* NAVIGATION */
+/* display the anchor link elements for the navigation bar side by side */
+nav {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* display the anchor links like text labels, changing in color as a pseudo element emulates a border starting from the left and encompassing the entire width of the element */
+nav a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  /* position relative for the pseudo element */
+  position: relative;
+  /* transition for the hover and focus states */
+  transition: all 0.25s ease-out;
+  transition-delay: 0.05s
+}
+
+nav a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background: rgb(84, 93, 145);
+  transition: width 0.25s ease-out;
+  z-index: -100;
+}
+
+nav a:hover, nav a:focus {
+  color: #fff;
+}
+nav a:hover:before, nav a:focus:before {
+  width: 100%
+}
+
+
+/* HOMEPAGE , CONTACTS, RANDOM PAGE */
+/* display the content of each section and the main element in a single column layout */
+main, section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  justify-content: center;
+  text-align: center;
+}
+h1 {
+  font-size: 4rem;
+  font-family: 'Gamja Flower', cursive;
+  text-transform: capitalize;
+  line-height: 1.5;
+}
+h2 {
+  font-size: 5rem;
+  font-family: 'Gamja Flower', cursive;
+  margin-bottom: 0.75rem;
+}
+p {
+  line-height: 2;
+}
+
+/* resize the SVG for the main element to be reasonably large */
+main svg {
+  margin: 1rem 0;
+  width: 150px;
+  fill: rgb(84, 93, 145);
+}
+
+/* display the contact icons side by side */
+.contacts__icons {
+  display: flex;
+  max-width: 550px;
+  width: 80vw;
+  justify-content: space-around;
+}
+/* resize the svg icons */
+.contacts__icons a {
+  width: 62px;
+  height: 62px;
+  /* position relative to absolute position the pseudo element */
+  position: relative;
+}
+/* include a silly transition on hover on the SVG icons */
+.contacts__icons a:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  z-index: -100;
+  background: rgba(84, 93, 145, 1);
+  border-radius: 50%;
+}
+.contacts__icons a:hover:before {
+  left: -50%;
+  top: -25%;
+  width: 200%;
+  height: 200%;
+  background: rgba(84, 93, 145, 0);
+  transition: all 0.25s ease-out;
+}
+
+.contacts__icons a svg {
+  width: 100%;
+  height: 100%;
+  fill: rgb(84, 93, 145);
+}

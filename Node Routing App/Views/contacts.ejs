@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+  <title>Contacts for Back-end</title>
+  <meta name="description" content="Create a contact's page for a simple web page used to practice with back-end development."/>
+
+  <!-- the style is included through express -->
+  <link rel="stylesheet" href="style.css"/>
+  <!-- <link rel="icon" href="tab_icon.png"> -->
+
+</head>
+
+<body>
+
+    <% include nav.ejs %>
+  <!-- svg icon set, define icons used in the page -->
+  <svg style="display:none;">
+    <symbol id="codepen-icon" width="98.837" height="98.837" viewBox="0 0 26.151 26.151"><g transform="translate(-.154 3.815)"  stroke="#000"><circle r="13.075" cy="9.26" cx="13.229"  stroke="none"/><g stroke="#fff" stroke-width=".504"><path d="M4.647 6.388v5.744M13.23 10.73v5.745M21.812 6.388v5.744"  stroke-width=".45480456"/><path d="M4.91 12.132l8.32-4.342 8.318 4.342-8.319 4.343z" stroke-width=".45480456"/><path d="M4.91 6.388l8.32-4.343 8.318 4.343-8.319 4.342z" stroke-width=".45480456"/><path d="M13.23 10.73v5.745M13.23 2.045V7.79"  stroke-width=".45480456"/></g></g>
+      <title>Behold my Codepen Projects</title>
+      <description>I have several pens which may be deserving of a second look.</description>
+    </symbol>
+
+    <symbol id="freecodecamp-icon" viewBox="0 0 100 100" width="100" height="100"><path  d="M50 0A50 50 0 0 0 0 50a50 50 0 0 0 50 50 50 50 0 0 0 50-50A50 50 0 0 0 50 0zM24.951 25.072a2.57 2.57 0 0 1 .18 0 2.57 2.57 0 0 1 1.765 4.348c-6.445 6.92-9.664 14.53-9.732 22.187-.068 7.657 3.005 15.488 9.75 22.881a2.57 2.57 0 1 1-3.795 3.463c-7.45-8.164-11.174-17.309-11.094-26.388.081-9.08 3.958-17.966 11.112-25.647a2.57 2.57 0 0 1 1.814-.844zm49.914 0a2.57 2.57 0 0 1 .184 0 2.57 2.57 0 0 1 1.814.844c7.154 7.68 11.03 16.567 11.112 25.646.08 9.08-3.645 18.225-11.094 26.39a2.57 2.57 0 1 1-3.795-3.464c6.745-7.393 9.818-15.224 9.75-22.88-.068-7.658-3.287-15.268-9.732-22.188a2.57 2.57 0 0 1 1.761-4.348zM41.533 26.96c2.372-.003 9.041 1.17 12.725 13.764 3.397 11.617 2.772-2.662 2.281-4.164 0 0 20.165 22.03-2.719 27.836-.883.09-1.72.158-2.529.209a23.909 23.909 0 0 1-2.732.09c-19.485.134-13.256-13.144-8.11-20.903 6.3-9.496-.324-16.992.219-16.768 0 0 .318-.063.865-.064zm7.026 37.734c.863-.006 1.765-.03 2.732-.09.192-.016.375-.028.574-.048 11.186-2.838 1.328-13.61 1.328-13.61.24.735.548 7.716-1.113 2.037-2.216-7.577-6.644-6.695-6.644-6.695-.266-.11 2.973 3.553-.106 8.195-2.449 3.693-5.404 9.944 3.229 10.211zM32.307 68.81h35.386a2.198 2.198 0 1 1 0 4.396H32.307a2.198 2.198 0 1 1 0-4.396z"/>
+      <title>Survey my Freecodecamp Account</title>
+      <description>My always-learning attitude is sharpened and refined by this great website.</description>
+    </symbol>
+
+    <symbol id="github-icon" width="100" height="100" viewBox="0 0 26.458334 26.458311"><path  d="M13.23 0A13.23 13.23 0 0 0 0 13.23a13.23 13.23 0 0 0 12.595 13.197c-1.805-.166-3.172-1.009-3.172-2.033V21.98c-.761-.093-1.41-.391-1.69-1.064-1.215-2.904-2.935-1.559-2.786-2.674 1.908-.958 2.607 1.051 4.476 2.108v-.594c0-.853.365-1.627.963-2.217-4.106-.694-5.08-2.872-5.08-4.986 0-1.066.363-2.367 1.22-3.523-.187-1.692-.056-3.634.94-4.074.176-.077.373-.108.586-.1.85.03 1.956.682 2.945 1.46a11.587 11.587 0 0 1 2.417-.241c.89 0 1.692.088 2.417.242 1.236-.974 2.656-1.747 3.53-1.361.996.44 1.127 2.382.94 4.074.857 1.156 1.22 2.457 1.22 3.523 0 2.167-.663 4.401-5.224 5.036.568.583.912 1.338.912 2.167v4.639c0 1.037-1.403 1.888-3.242 2.039a13.23 13.23 0 0 0 12.491-13.204A13.23 13.23 0 0 0 13.23 0zm.737 26.433a13.23 13.23 0 0 1-.732.025h.153c.198 0 .39-.01.579-.025zm-.732.025h-.023a13.23 13.23 0 0 0 .017 0 13.23 13.23 0 0 0 .006 0zm-.023 0a13.23 13.23 0 0 1-.617-.031c.201.018.407.03.617.03z"/>
+      <title>Examine my Github History</title>
+      <description>While a novice in web-development, I made coding a recurrent habit.</description>
+    </symbol>
+
+    <symbol id="twitter-icon" width="100" height="100" viewBox="0 0 26.458 26.458"><path d="M13.23 0A13.23 13.23 0 0 0 0 13.23a13.23 13.23 0 0 0 13.23 13.228A13.23 13.23 0 0 0 26.457 13.23 13.23 13.23 0 0 0 13.23 0zm-7.3 6.357c1.356 3.315 6.91 4.244 6.91 4.244 1.353-6.24 6.163-2.784 6.394-2.338.387.53 2.39-.464 2.39-.464.064.73-1.744 1.525-1.744 1.525l1.938.067c.065.397-1.808.928-1.808.928-.13 8.554-7.362 9.63-7.362 9.63h-.001c-3.81.664-7.62-1.06-7.62-1.06 2.518.465 5.489-2.653 5.489-2.653-2.088.495-3.627-.865-4.098-1.35a.311.311 0 0 1-.165-.174s.068.075.165.175c.642.32 2.741-.574 2.741-.574-4.069-.53-4.52-3.647-4.52-3.647 1.743 1.725 3.745 1.526 3.745 1.526-2.712.066-2.454-5.835-2.454-5.835z" />
+      <title>Check out my Twitter Profile</title>
+      <description>There aren't many followers out there, but plenty of projects and coding updates. Almost daily.</description>
+    </symbol>
+  </svg>
+
+
+  <!-- include a simple header atop link-able svg icons -->
+  <section class="conctacts">
+    <h2>Reach Out</h2>
+
+    <div class="contacts__icons">
+      <a href="https://codepen.io/borntofrappe">
+        <svg>
+          <use href="#codepen-icon"/>
+        </svg>
+      </a>
+
+      <a href="https://www.freecodecamp.org/borntofrappe">
+        <svg>
+          <use href="#freecodecamp-icon"/>
+        </svg>
+      </a>
+
+      <a href="https://github.com/borntofrappe">
+        <svg>
+          <use href="#github-icon"/>
+        </svg>
+      </a>
+
+      <a href="https://twitter.com/borntofrappe">
+        <svg>
+          <use href="#twitter-icon"/>
+        </svg>
+      </a>
+
+    </div>
+  </section>
+
+<!-- <script src="script.js"></script> -->
+</body>
+</html>
