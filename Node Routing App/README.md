@@ -60,3 +60,25 @@ app.get('/random', function(request, response) {
 });
 ```
 
+## EJS
+
+EJS files function much alike HTML files, rendering elements and referencing stylesheets in the head of the page.
+
+It is a very handy view engine, helpful to include data from the URL/ response in the page itself, but for the project at hand it is simply used to render HTML elements, and also bake the navigation bar as a partial.
+
+In `nav.ejs`:
+
+```ejs
+<!-- navigation for the simple page -->
+<nav class="container__navbar">
+    <a href="/">Home</a>
+    <a href="/contacts">Contacts</a>
+    <a href="/random">Random</a>
+</nav>
+```
+
+Every other `ejs` file, in its body:
+
+```ejs
+<% include nav.ejs %>
+```
