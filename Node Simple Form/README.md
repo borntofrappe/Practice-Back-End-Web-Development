@@ -1,5 +1,5 @@
-<!-- Link to the front-end form on codepen, right [here]().
-Link to the working back-end project on glitch, right [here](). -->
+Link to the front-end form on codepen, right [here](https://codepen.io/borntofrappe/full/yxxjmw/).
+Link to the working back-end project on glitch, right [here](https://dandy-close.glitch.me/).
 
 ## Preface
 
