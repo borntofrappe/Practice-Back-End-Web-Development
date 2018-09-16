@@ -7,3 +7,4 @@ This repo mirrors the 'Practice Front End Web Development' folder, literally for
 |Reference|Short Description|Tags|Date|
 |---|---|---|---|
 |[**Node Routing App**](https://maddening-ceiling.glitch.me/)|Create a simple Node application to render different pages, with Express and the EJS view engine.|node, express, ejs, routing|8th September 2018|
+|[**Node Simple Form**](https://dandy-close.glitch.me/)|Create a simple Node application to render a form, and display the values of the different input elements in a separate page.|node, express, ejs, form|16th September 2018|

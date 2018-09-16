@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+  <title>Form Structure</title>
+  <meta name="description" content="Create the basic structure for a form used to practice with Node.js. Express and ejs among the most prominent dependencies."/>
+
+  <link rel="stylesheet" href="../public/style.css"/>
+  <!-- <link rel="icon" href="tab_icon.png"> -->
+
+</head>
+
+<body>
+
+  <div class="container">
+    <!--
+      in a wrapping container include information retrieved from the query string
+      ! eventually retrieved from the query string and included in the page through the ejs view engine
+      for the design of the page, filler information is included
+
+      nest the templated data in between strong tags, to bolden and change their color in CSS
+    -->
+    <section class="introduction">
+      <h1>Welcome
+        <strong>
+          <%= data.fname %>
+        </strong>
+        <strong>
+            <%= data.lname %>
+        </strong>
+      </h1>
+
+      <p>Our favorite color is purple, but we're quite partial to
+        <strong>
+          <%= data.color %>
+        </strong>
+        as well.
+      </p>
+
+      <p>We've sent a confirmation link to your email.</p>
+
+      <p>Just be sure your email is
+        <strong class="highlight">
+          <%= data.email %>
+        </strong>
+        .
+      </p>
+
+      <p>And your favorite number is
+        <strong>
+          <%= data.number %>
+        </strong>
+        <span>; )</span>
+      </p>
+    </section>
+
+    <div class="form">
+
+      <p>Hope you've enjoyed this form.
+        <br>
+        If not, feel free to contact support.
+        <br>
+        We'll have a chat with our intern come review day.
+      </p>
+
+      <a href="/">Submit a new form</a>
+
+    </div>
+
+  </div>
+
+<!-- <script src="script.js"></script> -->
+</body>
+</html>
