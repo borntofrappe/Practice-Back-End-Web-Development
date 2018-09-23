@@ -1,6 +1,6 @@
 # Node Day Picker
 
-<!-- Link to the working glitch right [here](). -->
+Link to the working glitch right [here](https://witty-recess.glitch.me/).
 
 ## Preface
 
@@ -92,8 +92,8 @@ Elements are included without wrapping tags and with a not-too-foreign syntax. H
 
   //
     multi
-    line 
-    comment 
+    line
+    comment
   ```
 
   Such comments are rendered to HTML comments, while two forward-slash characters followed by a hyphen: `//-` are not rendered, not even to HTML comments. They serve their purpose in the development of the pug document.
@@ -173,4 +173,4 @@ The routes than render the different `pug` files. In the `post` route, the JavaS
 
 ## Glitch
 
-Just a small note here: remember that [Glitch]() does not support CSS pseudo properties. You need to remove these variables and include the values for the colors, fonts directly.
+Just a small note here: remember that [Glitch](https://glitch.com) does not support CSS pseudo properties. You need to remove these variables and include the values for the colors, fonts directly.
