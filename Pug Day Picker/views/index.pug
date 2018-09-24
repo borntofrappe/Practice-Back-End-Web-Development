@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="index.css")
+    title Day Picker
+  body
+    //- include in a container a heading and a paragraph, detailing the project
+    .container
+      .container__intro
+        h1 day picker
+        p pick a day, a month, a year
+      //- include the form specifying the post method and the selected route (remember it for the script.js file)
+      form.container__input(
+        action='/response' 
+        method='post'
+      )
+        //- include one option for each day, month and year from 1900 to 2050
+        - var day = 0;
+        - var month = 0;
+        - var year = 1900;
+        select(name='day')
+          while day<31
+            option(value=++day) #{day} 
+        select(name='month')
+          while month<12
+            option(value=++month) #{month}
+        select(name='year')
+          while year<2050
+            option(value=++year) #{year}
+        //- include a button of type submit
+        button(type='submit') get weekday

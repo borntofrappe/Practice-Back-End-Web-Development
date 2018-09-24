@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="response.css")
+    title Day Picked
+  body
+    //- render in a single container a header, including the day of the week as per the post request
+    .container
+      if isPast
+        h1 It was a #{dayOfWeek}
+      else
+        h1 It'll be a #{dayOfWeek}
+      p Here's an interesting factoid: the following dates are equivalent
+      ul
+        li 31st February 1901
+        li 3rd March 1901
+      blockquote There's always an answer, this time around
